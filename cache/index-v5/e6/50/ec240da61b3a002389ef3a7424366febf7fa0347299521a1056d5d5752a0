@@ -1,0 +1,2 @@
+
+029969ebd63dc978bdb440885120fc1433b57ec8	{"key":"make-fetch-happen:request-cache:https://reactbits.dev/default/jsrepo-manifest.json","integrity":null,"time":1749726224489,"size":null,"metadata":{"time":1749726224489,"url":"https://reactbits.dev/default/jsrepo-manifest.json","reqHeaders":{},"resHeaders":{"cache-control":"public, max-age=0, must-revalidate","content-type":"text/plain","date":"Thu, 12 Jun 2025 11:03:44 GMT","location":"https://www.reactbits.dev/default/jsrepo-manifest.json"},"options":{"compress":true},"status":308}}
