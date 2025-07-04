@@ -171,7 +171,7 @@ const HeroSection = () => {
             </span>
           </h1>
           <p className="text-black dark:text-gray-300 text-lg mb-8">
-            A passionate video editor and visual designer. I transform your vision into stunning visuals—from cinematic edits to modern graphic storytelling.
+            A passionate video editor and visual designer. I transform your vision into stunning visuals—from cinematic edits to modern graphic storyteller.
           </p>
 
           <Box
