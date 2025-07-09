@@ -1,58 +1,71 @@
 import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
-import Header from '../components/Header';
 import ContactSection from '../utils/ContactSection';
 import { ArrowBack } from "@mui/icons-material";
 
+
+
+
+// ✅ Dynamically import all category images using relative paths
+const videoEditingImages = import.meta.glob('../images/video-editing/*.{jpg,jpeg,png,svg}', {
+    eager: true,
+    import: 'default',
+});
+
+const posterImages = import.meta.glob('../images/poster/*.{jpg,jpeg,png,svg}', {
+    eager: true,
+    import: 'default',
+});
+
+const bannerImages = import.meta.glob('../images/banner/*.{jpg,jpeg,png,svg}', {
+    eager: true,
+    import: 'default',
+});
+
+const adBannerImages = import.meta.glob('../images/ad-banner/*.{jpg,jpeg,png,svg}', {
+    eager: true,
+    import: 'default',
+});
+
+const weddingCardImages = import.meta.glob('../images/wedding/*.{jpg,jpeg,png,svg}', {
+    eager: true,
+    import: 'default',
+});
+
+const thumbnailImages = import.meta.glob('../images/thumbnail/*.{jpg,jpeg,png,svg}', {
+    eager: true,
+    import: 'default',
+});
+
+//  Build the portfolioData object
 const portfolioData = {
     "video-editing": {
-        images: [
-            "https://img.freepik.com/free-photo/gamer-streaming-live_23-2151948254.jpg",
-            "https://img.freepik.com/free-photo/young-man-editing-footage_23-2149102784.jpg",
-            "https://img.freepik.com/free-photo/man-working-on-computer_23-2147789376.jpg",
-        ],
         videos: [
-            "https://www.w3schools.com/html/mov_bbb.mp4",
-            "https://www.w3schools.com/html/movie.mp4",
+            "https://youtube.com/shorts/SMQYWfxzICg?feature=share",
+            // "https://youtube.com/shorts/JSX9sln-0Yw?feature=share",
+            "https://youtube.com/shorts/-uDommedfGo?feature=share",
+            "https://youtube.com/shorts/JP8nwkyfkmM?feature=share",
+            "https://youtube.com/shorts/E30NfWfwrvU?feature=share",
         ],
     },
     "posters": {
-        images: [
-            "https://img.freepik.com/premium-psd/red-december-month-struggle-awareness-against-aids-hiv-other-stis-social-media-editable_1267017-1133.jpg",
-            "https://img.freepik.com/free-photo/poster-design-template_53876-116497.jpg",
-        ],
+        images: Object.values(posterImages),
         videos: [],
     },
     "banners": {
-        images: [
-            "https://img.freepik.com/free-vector/profile-picture-design_742173-13745.jpg",
-            "https://img.freepik.com/free-photo/modern-banner-template_23-2148994267.jpg",
-        ],
+        images: Object.values(bannerImages),
         videos: [],
     },
     "ad-banners": {
-        images: [
-            "https://img.freepik.com/premium-psd/cursos-militares-curso-preparatorio-military-courses-preparatory-course_927563-1756.jpg",
-            "https://img.freepik.com/premium-photo/promotional-banner-mockup_93675-131616.jpg",
-        ],
+        images: Object.values(adBannerImages),
         videos: [],
     },
     "wedding-cards": {
-        images: [
-            "https://img.freepik.com/premium-vector/modern-wedding-invitation-card-design_13329-2263.jpg",
-            "https://img.freepik.com/free-vector/hand-drawn-wedding-invitation_23-2148912930.jpg",
-            "https://img.freepik.com/free-photo/youth-vintage-vector-graphic-concept_53876-13843.jpg",
-            "https://img.freepik.com/free-vector/wedding-invitation-template-design_52683-108823.jpg",
-        ],
-        videos: [
-            "https://www.w3schools.com/html/movie.mp4",
-        ],
+        images: Object.values(weddingCardImages),
+        videos: [],
     },
     "thumbnails": {
-        images: [
-            "https://img.freepik.com/premium-psd/red-december-month-struggle-awareness-against-aids-hiv-other-stis-social-media-editable_1267017-1133.jpg",
-            "https://img.freepik.com/free-photo/poster-design-template_53876-116497.jpg",
-        ],
+        images: Object.values(thumbnailImages),
         videos: [],
     },
 };
@@ -60,15 +73,17 @@ const portfolioData = {
 
 const PortfolioShowcase = () => {
     const { title } = useParams();
-    const [activeTab, setActiveTab] = useState('images');
+
+    const section = portfolioData[title];
+    const images = section?.images || [];
+    const videos = section?.videos || [];
+
+    const [activeTab, setActiveTab] = useState(images.length === 0 ? 'videos' : 'images');
 
     const [modalOpen, setModalOpen] = useState(false);
     const [modalContent, setModalContent] = useState({ type: "", src: "" });
 
 
-    const section = portfolioData[title];
-    const images = section?.images || [];
-    const videos = section?.videos || [];
 
     if (!section) {
         return (
@@ -104,23 +119,26 @@ const PortfolioShowcase = () => {
 
                 {/* Tabs */}
                 <div className="flex justify-center gap-4 mb-8">
-                    <button
-                        onClick={() => setActiveTab('images')}
-                        className={`px-5 py-2 rounded-full text-sm font-semibold border cursor-pointer transition 
+                    {images.length > 0 && (
+
+                        <button
+                            onClick={() => setActiveTab('images')}
+                            className={`px-5 py-2 rounded-full text-sm font-semibold border cursor-pointer transition 
                         ${activeTab === 'images'
-                                ? ' bg-gradient-to-r from-violet-500 to-blue-500 dark:from-violet-300 dark:to-blue-300 text-black'
-                                : 'bg-transparent border-gray-400 text-gray-300 hover:border-blue-400 hover:text-blue-400'
-                            }`}
-                    >
-                        Images
-                    </button>
+                                    ? ' bg-gradient-to-r from-violet-500 to-blue-500 dark:from-violet-300 dark:to-blue-300 text-white dark:text-black'
+                                    : 'bg-transparent border-gray-400 text-gray-300 hover:border-blue-400 hover:text-blue-400'
+                                }`}
+                        >
+                            Images
+                        </button>
+                    )}
                     {videos.length > 0 && (
                         <button
                             onClick={() => setActiveTab('videos')}
                             className={`px-5 py-2 rounded-full text-sm font-semibold cursor-pointer border transition 
                         ${activeTab === 'videos'
-                                    ? ' bg-gradient-to-r from-violet-500 to-blue-500 dark:from-violet-300 dark:to-blue-300 text-black'
-                                    : 'bg-transparent border-gray-400 text-gray-300 hover:border-blue-400 hover:text-blue-400'
+                                    ? ' bg-gradient-to-r from-violet-500 to-blue-500 dark:from-violet-300 dark:to-blue-300 text-white dark:text-black'
+                                    : 'bg-transparent border-gray-400 text-gray-400 hover:border-blue-400 hover:text-blue-400'
                                 }`}
                         >
                             Videos
@@ -129,8 +147,11 @@ const PortfolioShowcase = () => {
                 </div>
 
                 {/* Content */}
-                <div className="max-w-6xl mx-auto columns-2 md:columns-3 lg:columns-4 xl:columns-3 gap-1 space-y-0">
-                    {activeTab === 'images' &&
+                <div className="max-w-6xl mx-auto columns-2 md:columns-3 lg:columns-4 xl:columns-3 gap-5 space-y-0">
+
+
+                    {activeTab === 'images' && images.length > 0 ?
+
                         images.map((img, idx) => (
                             <img
                                 key={idx}
@@ -140,26 +161,33 @@ const PortfolioShowcase = () => {
                                     setModalOpen(true);
                                     setModalContent({ type: "image", src: img });
                                 }}
-                                className="w-full break-inside-avoid rounded-lg transition-transform duration-300 mb-1"
+                                className="cursor-pointer w-full break-inside-avoid rounded-lg mb-3 transform transition duration-500 ease-in-out "
                             />
                         ))
+                        :
+                        <h2 className='text-center text-zinc-500'>
+                            {/* Currently no Images & Videos! */}
+                        </h2>
                     }
 
                     {activeTab === 'videos' &&
-                        videos.map((vid, idx) => (
-                            <video
-                                onClick={() => {
-                                    setModalOpen(true);
-                                    setModalContent({ type: "video", src: vid });
-                                }}
-                                autoPlay
-                                key={idx}
-                                className="w-full break-inside-avoid rounded-lg transition-transform duration-300 mb-1"
-                            >
-                                <source src={vid} type="video/mp4" />
-                                Your browser does not support the video tag.
-                            </video>
-                        ))
+                        videos.map((vid, idx) => {
+                            const embedUrl = vid.replace("shorts/", "embed/");
+                            return (
+                                <iframe
+                                    key={idx}
+                                    src={embedUrl}
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowFullScreen
+                                    className="w-full aspect-video rounded-lg mb-2"
+                                    onClick={() => {
+                                        setModalOpen(true);
+                                        setModalContent({ type: "video", src: embedUrl });
+                                    }}
+                                ></iframe>
+                            );
+                        })
+
                     }
                 </div>
             </section>

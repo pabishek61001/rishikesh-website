@@ -24,11 +24,11 @@ const ContactSection = () => {
                     <div className="space-y-5">
                         <div className="flex items-center gap-4">
                             <EmailIcon className="text-blue-400" />
-                            <span className="text-black dark:text-gray-300">rishikesh@example.com</span>
+                            <span className="text-black dark:text-gray-300">cutsography@gmail.com</span>
                         </div>
                         <div className="flex items-center gap-4">
                             <PhoneIcon className="text-blue-400" />
-                            <span className="text-black dark:text-gray-300">+91 98765 43210</span>
+                            <span className="text-black dark:text-gray-300">+91 76397 45890</span>
                         </div>
                         <div className="flex items-center gap-4">
                             <LocationOnIcon className="text-blue-400" />
@@ -42,13 +42,13 @@ const ContactSection = () => {
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
-                                @rishikesh
+                                @rishi.cuts
                             </a>
                         </div>
                         <div className="flex items-center gap-4">
                             <LinkedInIcon className="text-blue-400" />
                             <a
-                                href="https://linkedin.com/in/rishikesh"
+                                href="https://www.linkedin.com/in/rishikesh-r-57ab68373"
                                 className="text-black dark:text-gray-300 hover:text-blue-400 transition"
                                 target="_blank"
                                 rel="noopener noreferrer"

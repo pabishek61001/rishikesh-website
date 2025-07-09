@@ -139,12 +139,19 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { Box } from "@mui/material";
 
+import image1 from "../images/hero/2500-1406.png";
+import image2 from "../images/hero/ad.png";
+import image3 from "../images/hero/image3.jpg";
+
+import ps from "../images/icons/ps.png";
+import dr from "../images/icons/dr.png";
+import ae from "../images/icons/ae.png";
+import ai from "../images/icons/ai.png";
+
 const images = [
-  "https://img.freepik.com/free-vector/watercolor-hand-drawn-wedding-youtube-channel-art_23-2149035653.jpg",
-  "https://img.freepik.com/premium-psd/wedding-invitation-watercolor-flowers-with-text_131310-1354.jpg",
-  "https://img.freepik.com/free-vector/wedding-invitation-template-design_52683-108823.jpg",
-  "https://img.freepik.com/free-vector/watercolor-wedding-planner-landing-page-template_23-2149302606.jpg",
-  "https://img.freepik.com/premium-vector/traditional-royal-wedding-invitation-card-design-with-bride-groom-welcoming-illustration_13329-575.jpg",
+  image1,
+  image2,
+  image3
 ];
 
 const HeroSection = () => {
@@ -170,9 +177,18 @@ const HeroSection = () => {
               Rishikesh
             </span>
           </h1>
-          <p className="text-black dark:text-gray-300 text-lg mb-8">
+          <p className="text-black dark:text-gray-300 text-lg mb-3">
             A passionate video editor and visual designer. I transform your vision into stunning visuals—from cinematic edits to modern graphic storyteller.
           </p>
+
+
+          <div className="grid grid-cols-4 justify-center place-content-center mx-auto md:mx-0 items-start w-50">
+            <img data-aos="fade-up" src={ps} alt="PS" className="w-10 h-10 object-contain rounded-lg" />
+            <img data-aos="fade-up" data-aos-delay="100" src={ai} alt="AI" className="w-10 h-10 object-contain rounded-lg" />
+            <img data-aos="fade-up" data-aos-delay="200" src={ae} alt="AE" className="w-10 h-10 object-contain rounded-lg" />
+            <img data-aos="fade-up" data-aos-delay="300" src={dr} alt="DR" className="w-10 h-10 object-contain rounded-lg" />
+          </div>
+
 
           <Box
             mt={4}
