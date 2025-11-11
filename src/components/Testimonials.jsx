@@ -2,46 +2,53 @@ import React from "react";
 
 const testimonials = [
     {
-        name: "Anjali Sharma",
-        role: "Content Creator",
+        name: "Pragadeesh",
+        role: "Event Management",
         quote:
-            "Rishikesh's edits brought my videos to life! Super clean, super fast, and very professional.",
-        image: "https://randomuser.me/api/portraits/women/79.jpg",
+            "Working with Rishikesh was an absolute pleasure! He perfectly understood our vision and delivered a clean, engaging, and high-quality video edit on time. His attention to detail and creative storytelling really elevated our content. Highly recommend him for anyone looking for a skilled and reliable video editor!",
+        image: "https://avatar.iran.liara.run/public/boy",
     },
     {
-        name: "Arjun Mehta",
+        name: "Arjun",
+        role: "Influencer",
+        quote:
+            "One of the best editors I’ve worked with! Fast, creative, and understands what clicks with the audience. My videos have never looked this good.",
+        image: "https://avatar.iran.liara.run/public/boy",
+    },
+    {
+        name: "Venkatesh",
+        role: "Event Management",
+        quote:
+            "I reached out to Rishikesh to design a wedding e-invitation, and he absolutely nailed it! The design was elegant, modern, and exactly what we had in mind. He even made last-minute changes without any hesitation. Everyone loved the final invite — it looked premium and unique!.",
+        image: "https://avatar.iran.liara.run/public/boy",
+    },
+    {
+        name: "Vishi",
+        role: "Corporate MD",
+        quote:
+            "Rishikesh created a few ad banners for our brand, and the quality was just amazing. The color combinations, layout, and overall balance looked super professional. He really understands how to make a design eye-catching without overdoing it. Great experience working with him!.",
+        image: "https://avatar.iran.liara.run/public/boy",
+    },
+    {
+        name: "Surya",
         role: "Startup Founder",
         quote:
             "Amazing visuals and sharp storytelling. Highly recommend for any brand videos or promo work.",
-        image: "https://randomuser.me/api/portraits/men/32.jpg",
+        image: "https://avatar.iran.liara.run/public/boy",
     },
     {
-        name: "Sarah Lee",
-        role: "Wedding Planner",
+        name: "Abishek",
+        role: "E-Commerce Owner",
         quote:
-            "We loved the wedding invites and edits! Creative and elegant — just what we needed.",
-        image: "https://randomuser.me/api/portraits/women/44.jpg",
+            "I had an amazing experience working with Rishikesh! I just shared my rough idea, and he turned it into a clean, creative video that looked way more professional than I expected. He’s quick to respond, open to feedback, and his edits really bring the story to life. Definitely going to work with him again.",
+        image: "https://avatar.iran.liara.run/public/boy",
     },
     {
-        name: "Anjali Sharma",
-        role: "Content Creator",
+        name: "Vivek",
+        role: "Client",
         quote:
-            "Rishikesh's edits brought my videos to life! Super clean, super fast, and very professional.",
-        image: "https://randomuser.me/api/portraits/women/79.jpg",
-    },
-    {
-        name: "Arjun Mehta",
-        role: "Startup Founder",
-        quote:
-            "Amazing visuals and sharp storytelling. Highly recommend for any brand videos or promo work.",
-        image: "https://randomuser.me/api/portraits/men/32.jpg",
-    },
-    {
-        name: "Sarah Lee",
-        role: "Wedding Planner",
-        quote:
-            "We loved the wedding invites and edits! Creative and elegant — just what we needed.",
-        image: "https://randomuser.me/api/portraits/women/44.jpg",
+            "Created a Invitation Design for my Marriage , Within few mins team gave many Options to choose. Appreciate his  patience in listening to the requirements and fulfilled all my inputs, at reasonable cost.",
+        image: "https://avatar.iran.liara.run/public/boy",
     },
 ];
 

@@ -42,10 +42,14 @@ const portfolioData = {
     "video-editing": {
         videos: [
             "https://youtube.com/shorts/SMQYWfxzICg?feature=share",
-            // "https://youtube.com/shorts/JSX9sln-0Yw?feature=share",
             "https://youtube.com/shorts/-uDommedfGo?feature=share",
             "https://youtube.com/shorts/JP8nwkyfkmM?feature=share",
             "https://youtube.com/shorts/E30NfWfwrvU?feature=share",
+            'https://youtube.com/shorts/RnSexaJKim4?si=AirUaLYEvNER-CML',
+            'https://youtube.com/shorts/maqbDeRYIEE?feature=share',
+            'https://youtube.com/shorts/fd01L6awoSI',
+            'https://youtube.com/shorts/Tx2uJfollIg'
+
         ],
     },
     "posters": {
