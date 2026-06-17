@@ -69,7 +69,7 @@ const Testimonials = () => {
                         >
                             <div className="flex items-center gap-4 mb-4">
                                 <img
-                                    src={testimonial.image}
+                                    src={"https://i.pinimg.com/736x/96/e2/a7/96e2a7d987ce19f693d39f131cda092a.jpg"}
                                     alt={testimonial.name}
                                     className="w-14 h-14 rounded-full object-cover"
                                 />
