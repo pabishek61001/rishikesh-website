@@ -6,7 +6,7 @@ import videoEditingImg from "../images/serviceThumbnails/Video_editing.png";
 import adsBannerImg from "../images/serviceThumbnails/Ads_banner.png";
 import bannerImg from "../images/serviceThumbnails/banners.png";
 import posterImg from "../images/serviceThumbnails/poster.png";
-import thumbnailImg from "../images/serviceThumbnails/thumnail.png";
+import thumbnailImg from "../images/serviceThumbnails/Thumnail.png";
 import weddingCardImg from "../images/serviceThumbnails/wedding_cards.png";
 
 const services = [
