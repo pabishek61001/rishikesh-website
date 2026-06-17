@@ -2,8 +2,8 @@ import { ArrowForward } from '@mui/icons-material';
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
-import videoEditingImg from "../images/serviceThumbnails/video_editing.png";
-import adsBannerImg from "../images/serviceThumbnails/ads_banner.png";
+import videoEditingImg from "../images/serviceThumbnails/Video_editing.png";
+import adsBannerImg from "../images/serviceThumbnails/Ads_banner.png";
 import bannerImg from "../images/serviceThumbnails/banners.png";
 import posterImg from "../images/serviceThumbnails/poster.png";
 import thumbnailImg from "../images/serviceThumbnails/thumnail.png";
