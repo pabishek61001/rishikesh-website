@@ -192,12 +192,12 @@ const PortfolioShowcase = () => {
                                             setModalOpen(true);
                                             setModalContent({ type: "video", src: vid });
                                         }}
-                                        
+
                                         className="group relative bg-black rounded-xl overflow-hidden aspect-video lg:aspect-[16/10] cursor-pointer shadow-lg hover:shadow-2xl hover:shadow-violet-500/20 transition-all duration-300 hover:scale-[1.02]"
                                     >
                                         <video
                                             src={vid}
-                                            autoPlay={true}
+                                            autoPlay={modalOpen ? false : true}
                                             loop
                                             muted
                                             playsInline
