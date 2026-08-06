@@ -197,7 +197,7 @@ const PortfolioShowcase = () => {
                                     >
                                         <video
                                             src={vid}
-                                            autoPlay={modalOpen ? false : true}
+                                            autoPlay={false}
                                             loop
                                             muted
                                             playsInline
