@@ -27,7 +27,7 @@ const LandingPage = () => {
                     <section
                         key={section.id}
                         id={section.id}
-                        className={`flex items-center justify-center ${section.color} px-6`}
+                        className={`flex items-center justify-center ${section.color} px-2 sm:px-6`}
                     >
 
                         {section.text}
@@ -37,7 +37,7 @@ const LandingPage = () => {
                     <section
                         key={section.id}
                         id={section.id}
-                        className={` ${section.color} px-6`}
+                        className={` ${section.color} px-2 sm:px-6`}
                     >
                         {section.text}
                     </section>
